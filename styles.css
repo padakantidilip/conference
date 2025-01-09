@@ -1,0 +1,243 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .conference-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #003366; /* Rich dark blue */
+    color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .event-name h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .logos {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .logo {
+    height: 50px;
+    width: auto;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: #004080;
+    display: flex;
+    justify-content: center; /* Center the navigation items */
+    padding: 10px 0;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px; /* Space between navigation items */
+  }
+  
+  .navbar li {
+    position: relative;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 15px 20px;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    background-color: #00509e;
+    color: #ffcc00;
+  }
+  
+  /* Dropdown Menu Hidden by Default */
+  .dropdown-menu {
+    display: none; /* Hide dropdown by default */
+    position: absolute;
+    top: 100%; /* Positioned below the parent */
+    left: 0; /* Align with the parent item */
+    background-color: #004080;
+    list-style: none;
+    margin: 0;
+    padding: 5px 0; /* Add spacing above/below dropdown items */
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  /* Dropdown Menu Items - Vertical */
+  .dropdown-menu li {
+    min-width: 200px; /* Ensure enough width for longer text */
+    border-bottom: 1px solid #003366;
+  }
+  
+  .dropdown-menu li:last-child {
+    border-bottom: none; /* Remove border for the last item */
+  }
+  
+  .dropdown-menu a {
+    padding: 12px 20px; /* Uniform padding around text */
+    white-space: nowrap; /* Prevent text wrapping */
+    color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: left; /* Ensure alignment of text */
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: #00509e;
+    color: #ffcc00;
+  }
+  
+  /* Show Dropdown on Hover */
+  .dropdown:hover .dropdown-menu {
+    display: block; /* Make dropdown visible */
+  }
+  
+  /* Smooth Dropdown Animation */
+  .dropdown-menu {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0); /* Slide down effect */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar ul {
+      flex-direction: column;
+      gap: 15px; /* Adjust spacing for smaller screens */
+    }
+  
+    .dropdown-menu {
+      position: static;
+      transform: none;
+      opacity: 1;
+      display: block;
+    }
+  }
+
+/* Footer Styling */
+.conference-footer {
+    background-color: #003366;
+    color: #ffffff;
+    padding: 40px 20px;
+    text-align: left;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .footer-left, .footer-center, .footer-right {
+    flex: 1;
+    padding: 15px;
+  }
+  
+  h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  p, a {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #ffcc00;
+  }
+  
+  .footer-left p, .footer-center p {
+    margin-bottom: 5px;
+  }
+  
+  .footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .social-links {
+    margin-bottom: 15px;
+  }
+  
+  .social-icon {
+    text-decoration: none;
+    color: #ffffff;
+    margin-right: 15px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    color: #ffcc00; /* Gold color on hover */
+  }
+  
+  .footer-links a {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-links a:hover {
+    color: #ffcc00;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-left, .footer-center, .footer-right {
+      padding: 10px 0;
+      text-align: center;
+    }
+  
+    .footer-right {
+      align-items: center;
+    }
+  
+    .social-links {
+      margin-bottom: 20px;
+    }
+  }
+  
+
+  /* Image Styling */
+.image-container {
+    text-align: center; /* Center the image */
+    padding: 40px 0;
+  }
+  
+  .main-image {
+    width: 100%; /* Ensure it takes full width */
+    max-width: 1200px; /* Limit max size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow for a soft effect */
+  }
+  
